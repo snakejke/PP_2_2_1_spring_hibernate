@@ -12,9 +12,9 @@ import java.util.List;
 public class UserServiceImp implements UserService {
 
     @Autowired
-    private UserDao userDao;
+    private UserDao userDao;//todo: неправильно именование слоя ..Spring, Hibernate ..уже repository
 
-    @Transactional
+    @Transactional//todo: выносим как типовую - над классом
     @Override
     public void add(User user) {
         userDao.add(user);
@@ -28,7 +28,7 @@ public class UserServiceImp implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public User getUserByCarModelAndSeries(String model, int series) {
+    public User getUserByCarModelAndSeries(String model, int series) {//todo: пора избавляться от примитивов
         return userDao.getUserByCarModelAndSeries(model, series);
     }
 

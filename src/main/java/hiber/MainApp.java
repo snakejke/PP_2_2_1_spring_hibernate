@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MainApp {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException {//todo: throws SQLException - зачем?
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
